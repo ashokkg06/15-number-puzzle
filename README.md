@@ -1,6 +1,6 @@
 <h1 align="center">
 <a href="https://github.com/ashokkg06/15-number-puzzle">
-<img src="D:\html\15 number puzzle  - GitHUB\head image\15numberpuzzleimage.png" alt="15Puzzle" width="200"/></a><br/><br/>
+<img src="https://user-images.githubusercontent.com/109447518/179419013-1b18ff06-1065-46cc-87da-39578438b886.png" alt="15Puzzle" width="500"/></a><br/><br/>
 15-number-puzzle
 </h1>
 <h4 align="center">My first Game</h4>
@@ -10,14 +10,14 @@
 > This is a classic _15_-_puzzle_. To play, you first scramble or to arrange the tiles and then try to put them back in order. To move a tile you simply click on it to replace the empty button
 
 <h1 align="center">
-<img src="D:\html\15 number puzzle  - GitHUB\head image\full_image.PNG" alt="15Puzzle" width="729px"/>
+<img src="https://user-images.githubusercontent.com/109447518/179419094-c1431eea-5f3d-4c53-9205-4f11682bd622.PNG" alt="15Puzzle" width="729px"/>
 </h1>
 
 
 ## Gameplay
 
 <h1 align="center">
-<img src="D:\html\15 number puzzle  - GitHUB\head image\ezgif.com-gif-maker.gif" width="500px"/>
+<img src="https://user-images.githubusercontent.com/109447518/179419067-f1ca288e-8e6e-4e03-9f88-4fa761558079.gif" width="500px"/>
 </h1>
 
 ## Development
