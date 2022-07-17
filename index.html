@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title> Puzzle </title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|3d-float">
+  <meta charset="UTF-8">
+</head>
+<style>
+	/* table
+	{
+	     width: 30%;
+	     border-collapse: collapse;
+	}
+	table.center 
+	{
+  	     margin-left: auto;
+  	     margin-right: auto;
+	}
+	tr td{
+	      height = 50px;
+	      width = 50px;
+	      font-size: 30px;
+	      font-color: black;
+	      color: lightblue;
+	      border: 2px solid;
+	      text-align: center;
+	      font-family:sans-serif;
+	      background-color: blue;
+	}*/
+  div{
+    margin-top: 30px;
+  }
+        .buttons{
+        font-size: 1.5em;
+        background-color: lightblue;
+        color: black;
+        width: 70px;
+        height: 70px;
+        line-height: 2;
+        text-align: center;
+        font-family: Helvetica, Arial, sans-serif;
+        margin: 2px;
+        padding: 1px;
+        border-radius:5px;
+        font-weight: bold;
+        cursor: pointer;
+        }
+        .buttonspace
+        {
+        font-size: 1.5em;
+        background-color: #3F486C;
+        color: #3F486C;
+        width: 70px;
+        height: 70px;
+        line-height: 2;
+        text-align: center;
+        font-family: Helvetica, Arial, sans-serif;
+        margin: 2px;
+        padding: 1px;
+        border-radius:5px;
+        font-weight: bold;
+        cursor: pointer;      
+        }
+  h1{
+    font-size:50px;
+    font-weight:bold;
+    font-family: 'Rancho', sans-serif; 
+    text-align:center;
+  }
+  .startbutton{
+        margin-top: 10px;
+        font-size: 1.3em;
+        border-radius: 5px;
+        background-color: white;
+        color: black;
+        padding: 4px;
+        width: 122px;
+        height: 50px;
+        line-height: 2px;
+        text-align: center;
+        font-family: sans-serif;
+        font-weight: bold;
+        cursor: pointer;
+  }
+  .ngame {
+  border-color: green;
+  color: black;
+}
+
+.ngame:hover {
+  background-color: #04AA6D;
+  color: white;
+}
+  .undobutton{
+    margin-top: 10px;
+        font-size: 1.3em;
+        border-radius: 5px;
+        background-color: white;
+        color: black;
+        padding: 4px;
+        width: 122px;
+        height: 50px;
+        line-height: 2px;
+        text-align: center;
+        font-family: sans-serif;
+        font-weight: bold;
+        margin-left: auto;
+        margin-right: auto;
+        display : none;
+        cursor: pointer;
+  }
+  .undogame {
+  border-color: green;
+  color: black;
+}
+
+.undogame:hover {
+  background-color: #04AA6D;
+  color: white;
+}
+  .positions{
+    font-size: 1.5em;
+        background-color: blue;
+        color: black;
+        width: 70px;
+        height: 70px;
+        line-height: 2;
+        text-align: center;
+        font-family: Helvetica, Arial, sans-serif;
+        margin: 2px;
+        padding: 1px;
+        border-radius:5px;
+        font-weight: bold;
+        cursor: pointer;
+  }
+  
+  h3{
+    color: #02282C;
+    font-family: Helvetica, Arial, sans-serif;
+    display:none;
+  }
+  
+  p{
+    color: white;
+    font-family: Helvetica, Arial, sans-serif;
+    display:none;
+  }
+  
+</style>
+  
+<body style = "text-align:center;background-color:#A936F9;">
+	<h1 style = "color:black" > 15 Number Puzzle </h1> 
+  <input type = "button" class="startbutton ngame" onclick=startgame() value="New Game"> </input>
+	<!--
+  <button class="button" id="1" style = "height:50px; width:50px;" onclick="check(this.id)"> 7 </button>
+	<button class="button" id="2" style = "height:50px; width:50px;" onclick="check(this.id)"> 10 </button>
+	<button class="button" id="3" style = "height:50px; width:50px;" onclick="check(this.id)"> 6 </button>
+	<button class="button" id="4" style = "height:50px; width:50px;" onclick="check(this.id)"> 9 </button>
+	</br>
+	<button class="button" id="5" style = "height:50px; width:50px;" onclick="check(this.id)"> 11 </button>
+	<button class="button" id="6" style = "height:50px; width:50px;" onclick="check(this.id)"> 0 </button>
+	<button class="button" id="7" style = "height:50px; width:50px;" onclick="check(this.id)"> 2 </button>
+	<button class="button" id="8" style = "height:50px; width:50px;" onclick="check(this.id)"> 12 </button>
+	</br>
+  	<button class="button" id="9" style = "height:50px; width:50px;" onclick="check(this.id)"> 15 </button>
+	<button class="button" id="10" style = "height:50px; width:50px;" onclick="check(this.id)"> 3 </button>
+	<button class="button" id="11" style = "height:50px; width:50px;" onclick="check(this.id)"> 5 </button>
+	<button class="button" id="12" style = "height:50px; width:50px;" onclick="check(this.id)"> 4 </button>
+	</br>
+	<button class="button" id="13" style = "height:50px; width:50px;" onclick="check(this.id)"> 1 </button>
+	<button class="button" id="14" style = "height:50px; width:50px;" onclick="check(this.id)"> 13 </button>
+	<button class="button" id="15" style = "height:50px; width:50px;" onclick="check(this.id)"> 8 </button>
+	<button class="button" id="16" style = "height:50px; width:50px;" onclick="check(this.id)"> 14 </button>	-->
+
+<p id = "puzzle" style ="color:green; font-size: 20px; font-weight: bold;"> </p>
+  
+  <input type="button" id="display"class="undobutton undogame" onclick="undo()" value="Undo" > </input>  
+
+<h3 id="description"> Move tiles in grid to order them from <b> 1 to 15 </b> </h3>
+
+<p id="credit"> Made with &#128157 by <b>K G Ashok</b> </br></br>
+  This project is open source, visit the repo. </p>
+
+<script>
+  let u = 0;
+  function startgame(){
+    document.getElementById('display').style.display = "block";
+    document.getElementById('description').style.display = "block";
+    document.getElementById('credit').style.display = "block";
+    document.getElementById('puzzle').style.display = "block";
+  u = 0;
+	var string = "";
+  var random = new Array(); 
+  var k = 0; 
+  for (var a = [1, 2, 3, 4,5,6,7,8,9,10,11,12,13,14,15,16], i = a.length; i--; ) {
+    random[k] = a.splice(Math.floor(Math.random() * (i + 1)), 1)[0];
+    k++; 
+    }
+  
+  k = 0;
+  string+="<div>"
+	for(let i=1; i<=4; i++)
+	{
+    for(let j=1; j<=4; j++)
+      {
+        if(random[k]==16)
+          {
+            string += "<button class=buttonspace id="+(k+1)+" onclick=check(this.id)> " + random[k] +" </button>"
+          }
+        else if(random[k]==k+1)
+          {
+            string += "<button class=positions id="+(k+1)+" onclick=check(this.id)> " + random[k] +" </button>"
+          }
+        else { 
+	   string += "<button class=buttons id="+(k+1)+" onclick=check(this.id)> " + random[k] +" </button>" 
+        }
+		k++; 
+	}  
+    string+="<br>";
+  }
+  string+="</div>"
+    
+  document.getElementById('puzzle').innerHTML = string;
+    
+  }
+  
+  
+  var undoarray = new Array();
+  let w;
+  var v;
+  
+	function check(id)
+	{
+	v = parseInt(id);
+    
+	if((v%4!=0 && v<16) && document.getElementById(v+1).innerHTML==16)
+	{
+	    var temp = document.getElementById(v).innerHTML; 
+	    document.getElementById(v).innerHTML = document.getElementById(v+1).innerHTML;
+	    document.getElementById(v+1).innerHTML = temp;
+      document.getElementById(v).setAttribute('class','buttonspace');
+      document.getElementById(v+1).setAttribute('class','buttons');
+      undoarray[u] = temp;
+      u++;
+    if(v+1==document.getElementById(v+1).innerHTML)
+      {
+        document.getElementById(v+1).setAttribute('class','positions');
+      }
+	} 
+	else if(((v-1)%4!=0 && (v>1 && v<=16)) && document.getElementById(v-1).innerHTML==16)
+	{
+	    var temp = document.getElementById(v).innerHTML;
+	    document.getElementById(v).innerHTML = document.getElementById(v-1).innerHTML;
+	    document.getElementById(v-1).innerHTML = temp;
+      document.getElementById(v).setAttribute('class','buttonspace');
+      document.getElementById(v-1).setAttribute('class','buttons');
+	    undoarray[u] = temp;
+      u++;
+    if(v-1==document.getElementById(v-1).innerHTML)
+      {
+        document.getElementById(v-1).setAttribute('class','positions');
+      }
+  }	
+	else if((v>4 && v<=16) && document.getElementById(v-4).innerHTML==16)
+	{
+	    var temp = document.getElementById(v).innerHTML;
+	    document.getElementById(v).innerHTML = document.getElementById(v-4).innerHTML;
+	    document.getElementById(v-4).innerHTML = temp;
+      document.getElementById(v).setAttribute('class','buttonspace');
+      document.getElementById(v-4).setAttribute('class','buttons');
+	    undoarray[u] = temp;
+      u++;
+    if(v-4==document.getElementById(v-4).innerHTML)
+      {
+        document.getElementById(v-4).setAttribute('class','positions');
+      }
+  }
+	else if((v>=1 && v<=12) && document.getElementById(v+4).innerHTML==16)
+	{
+	    var temp = document.getElementById(v).innerHTML;
+	    document.getElementById(v).innerHTML = document.getElementById(v+4).innerHTML;
+	    document.getElementById(v+4).innerHTML = temp;
+      document.getElementById(v).setAttribute('class','buttonspace');
+      document.getElementById(v+4).setAttribute('class','buttons');
+	    undoarray[u] = temp;
+      u++;
+    if(v+4==document.getElementById(v+4).innerHTML)
+      {
+        document.getElementById(v+4).setAttribute('class','positions');
+      }
+  }
+  w = u-1;
+    for(let i=1; i<16; i++)
+      {
+        /*if(v==i && document.getElementById(v).innerHTML==i)
+          {
+            document.getElementById(i).setAttribute('class','positions');
+            console.log(v);
+          }*/
+      }
+} 
+  function undo()
+  {
+    
+    let temp1 = 1;
+    for(let i=1; i<=16 && temp1==1;  i++)
+    {
+        for(let j=1; j<=16; j++)
+        {
+        if(document.getElementById(j).innerHTML==16 && document.getElementById(i).innerHTML==undoarray[w]) 
+          {
+            let temp = document.getElementById(i).innerHTML;
+            document.getElementById(i).innerHTML = document.getElementById(j).innerHTML;
+            document.getElementById(j).innerHTML = temp; 
+            document.getElementById(i).setAttribute('class','buttonspace');
+            document.getElementById(j).setAttribute('class','buttons');
+            temp1=0;
+            for(let i=1; i<16; i++)
+            {
+              if(j==i && document.getElementById(j).innerHTML==i)
+              {
+                document.getElementById(j).setAttribute('class','positions');
+                console.log(v);
+              }
+            }
+            break;
+          }
+        }
+    }
+    w--;
+    
+  }
+  
+</script>
+</body>
+</html>
