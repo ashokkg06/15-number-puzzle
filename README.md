@@ -31,7 +31,7 @@
 
 <h3 align="center">or</h3>
 
-View a live demo of this project on [netlify](https://github.com/ashokkg06/15-number-puzzle)
+View a live demo of this project on [Demo site](https://ashokkg06.github.io/15-number-puzzle/)
 
 
 
