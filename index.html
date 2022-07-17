@@ -6,27 +6,7 @@
   <meta charset="UTF-8">
 </head>
 <style>
-	/* table
-	{
-	     width: 30%;
-	     border-collapse: collapse;
-	}
-	table.center 
-	{
-  	     margin-left: auto;
-  	     margin-right: auto;
-	}
-	tr td{
-	      height = 50px;
-	      width = 50px;
-	      font-size: 30px;
-	      font-color: black;
-	      color: lightblue;
-	      border: 2px solid;
-	      text-align: center;
-	      font-family:sans-serif;
-	      background-color: blue;
-	}*/
+
   div{
     margin-top: 30px;
   }
@@ -151,26 +131,6 @@
 <body style = "text-align:center;background-color:#A936F9;">
 	<h1 style = "color:black" > 15 Number Puzzle </h1> 
   <input type = "button" class="startbutton ngame" onclick=startgame() value="New Game"> </input>
-	<!--
-  <button class="button" id="1" style = "height:50px; width:50px;" onclick="check(this.id)"> 7 </button>
-	<button class="button" id="2" style = "height:50px; width:50px;" onclick="check(this.id)"> 10 </button>
-	<button class="button" id="3" style = "height:50px; width:50px;" onclick="check(this.id)"> 6 </button>
-	<button class="button" id="4" style = "height:50px; width:50px;" onclick="check(this.id)"> 9 </button>
-	</br>
-	<button class="button" id="5" style = "height:50px; width:50px;" onclick="check(this.id)"> 11 </button>
-	<button class="button" id="6" style = "height:50px; width:50px;" onclick="check(this.id)"> 0 </button>
-	<button class="button" id="7" style = "height:50px; width:50px;" onclick="check(this.id)"> 2 </button>
-	<button class="button" id="8" style = "height:50px; width:50px;" onclick="check(this.id)"> 12 </button>
-	</br>
-  	<button class="button" id="9" style = "height:50px; width:50px;" onclick="check(this.id)"> 15 </button>
-	<button class="button" id="10" style = "height:50px; width:50px;" onclick="check(this.id)"> 3 </button>
-	<button class="button" id="11" style = "height:50px; width:50px;" onclick="check(this.id)"> 5 </button>
-	<button class="button" id="12" style = "height:50px; width:50px;" onclick="check(this.id)"> 4 </button>
-	</br>
-	<button class="button" id="13" style = "height:50px; width:50px;" onclick="check(this.id)"> 1 </button>
-	<button class="button" id="14" style = "height:50px; width:50px;" onclick="check(this.id)"> 13 </button>
-	<button class="button" id="15" style = "height:50px; width:50px;" onclick="check(this.id)"> 8 </button>
-	<button class="button" id="16" style = "height:50px; width:50px;" onclick="check(this.id)"> 14 </button>	-->
 
 <p id = "puzzle" style ="color:green; font-size: 20px; font-weight: bold;"> </p>
   
@@ -179,7 +139,7 @@
 <h3 id="description"> Move tiles in grid to order them from <b> 1 to 15 </b> </h3>
 
 <p id="credit"> Made with &#128157 by <b>K G Ashok</b> </br></br>
-  This project is open source, visit the repo. </p>
+  This project is open source, visit the <a href="https://github.com/ashokkg06/15-number-puzzle" > repo. </a> </p>
 
 <script>
   let u = 0;
@@ -290,14 +250,7 @@
       }
   }
   w = u-1;
-    for(let i=1; i<16; i++)
-      {
-        /*if(v==i && document.getElementById(v).innerHTML==i)
-          {
-            document.getElementById(i).setAttribute('class','positions');
-            console.log(v);
-          }*/
-      }
+  
 } 
   function undo()
   {
