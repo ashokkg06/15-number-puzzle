@@ -31,7 +31,7 @@
 
 <h3 align="center">or</h3>
 
-View a live demo of this project on [Demo site](https://ashokkg06.github.io/15-number-puzzle/)
+View a live demo of this project on <a href="https://ashokkg06.github.io/15-number-puzzle/" target="_blank" > Demo site </a>
 
 
 
